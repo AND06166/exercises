@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange</title>
+    <link rel="stylesheet" type="text/css" href="slideshow_only.css">
+</head>
+<body>
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="slideshow.html" target="_blank">Home</a></td>
+                <td><a href="page-2.html" target="_blank">Full Gallery</a></td>
+                <td>Create Submission</td>
+                <td>About</td>
+                <td>Sign-In</td>
+            </tr>
+        </table>
+    </nav>
+    <div class="sign-ing">
+        <b class="sign-in">Sing-In</b>
+        <b class="user">Username</b>
+        <b class="user">Password</b>
+        <b class="sign-in">Create Account</b>
+    </div> <!-- END OF NAV -->
+
+
+    <!-- SLIDESHOW CONTAINER -->
+    <div class="slideshow-container">
+        <h2><a href="page-2.html" target="_blank">View Full Gallery</a></h2>
+        <div class="op"></div>
+        <!-- FULL WITH IMAGES WITH NUMBERS AND CAPTIONS -->
+        <div class="mySlides fade">
+            <img src="img/lillies.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/tulips_home.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/orchids_home.jpg" style="width:100%">
+        </div>
+        <!-- DOTS/CIRCLES -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!--NEXT /PREVIOUS BUTTONS -->
+        <b class="prev" onclick="plusSlides(-1)">&#10094;</b>
+        <b class="next" onclick="plusSlides(1)">&#10095;</b>
+    </div>
+</div>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+</html>
