@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+    <style>
+        * {box-sizing:border-box}
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 1000px;
+            height: 562px;
+            float: right;
+        }
+
+        .sign-in {
+            text-align: left;
+            font-family: "didot", serif;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .user {
+            text-align: left;
+            margin: 0 0 15px 15px;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .slideshow_menu {
+            float: right;
+            width: 1000px;
+            height: 30px;
+            background-color: #24bd5c;
+            margin-top: -4px;
+        }
+
+        .sign-ing {
+            width: 300px;
+            height: 696px;
+            background-color: #ebebeb;
+            float: left;
+        }
+
+        nav {
+            width: 1300px;
+            Height: 44px;
+            background-color: #24bd5c;
+            border-radius: 0;
+            margin: 0 auto;
+            padding: 0 0 10px 0;
+        }
+
+        .nav_table   {
+            table-layout: fixed;
+            width: 800px;
+            text-align: center;
+            margin: 0 auto;
+            position: center;
+            color: white;
+            font-size: 22px;
+            padding-bottom: 70px;
+        }
+
+        body {
+            background-color: #f9c6ff;
+        }
+
+        header {
+            width: 1300px;
+            height: 130px;
+            background-color: #24bd5c;
+            position: relative;
+            margin: 0 auto;
+            margin-top: -81px
+        }
+
+        h1 {
+            font-size: 120px;
+            text-align: center;
+            color: white;
+
+        }
+        .op {
+            margin-top: 512px;
+            border-radius: 20px 20px 0 0;
+            margin-left: 333px;
+            width: 350px;
+            height: 50px;
+            background-color: #24bd5c;
+            position: absolute;
+            z-index: 1;
+        }
+
+        h2 {
+            font-family: "Didot LT Pro", serif;
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            float: right;
+            margin-left: 345px;
+            margin-top: 512px;
+            z-index: 2;
+        }
+
+        h3 {
+            font-family: Verdana, serif;
+            font-size: 10pt;
+            margin-left: 120px;
+            margin-top: 45px;
+            color: grey;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h4 {
+            font-family: Georgia, serif;
+            font-size: 8pt;
+            margin-left: 120px;
+            margin-top: 20px;
+            color: darkgray;
+            text-align: center;
+        }
+
+        b {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: #ffcb92;
+        }
+
+        a:hover {
+            color: #ffbd6f;
+        }
+
+        a:active {
+            color: #ffa946;
+        }
+
+
+        main {
+            width: 980px;
+            height: 550px;
+            background-color: white;
+            float: right;
+        }
+
+        .wrapper {
+            width: 1300px;
+            height: 870px;
+            background-color: white;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .wrap_design {
+            margin-left: -110px;
+            position: fixed;
+            zoom: 200%;
+            opacity: 0.6;
+        }
+
+        .wrap_right {
+            float: right;
+            margin-left: 655px;
+            position: fixed;
+            zoom: 200%;
+            opacity: 0.6;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -80px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 7px 2px 0 2px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .textbox {
+            height: 40px;
+            width: 270px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            padding: 2px;
+        }
+
+        .button {
+            margin: 8px 0 25px 15px;
+            width: 100px;
+            height: 35px;
+            background-color: orange;
+            border-radius: 6px;
+            border: orange;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+
+        .button:hover {background-color: #f49d00
+        }
+
+        .button:active {background-color: #24bd5c;
+        }
+
+        .button_2 {
+            margin: 8px 0 15px 15px;
+            width: 170px;
+            height: 35px;
+            background-color: orange;
+            border-radius: 6px;
+            border: orange;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+
+        .button_2:hover {background-color: #f49d00
+        }
+
+        .button_2:active {background-color: #24bd5c;
+        }
+
+        a {
+            font-family: Palatino, sans-serif;
+        }
+
+        .active, .dot:hover {
+            background-color: #105629;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .backdrop
+        {
+            margin: 0 auto;
+            zoom: 150%;
+            z-index: -1;
+            position: fixed;
+        }
+
+        .icon_1
+          {
+              zoom: 20%;
+              float: right;
+            margin-top: 50px;
+            margin-right: 100px;
+          }
+
+        .icon_2
+        {
+            zoom: 14%;
+            float: left;
+            margin-left: 125px;
+
+        }
+
+    </style>
+</head>
+<body> <img class="backdrop" src="img/backdrop.png">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a>About</a></td>
+                <td><a>Sign In</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div class="sign-ing">
+        <b class="sign-in">Sign In</b>
+        <form>
+            <label class="user">Username:</label><br>
+            <input class="textbox" type="text" name="fname"><br>
+            <label class="user">Password:</label><br>
+            <input class="textbox" type="text" name="lname">
+        </form>
+        <button class="button" type="button">Sign-In</button>
+        <b class="sign-in">Create Account</b>
+        <form>
+            <label class="user">Username:</label><br>
+            <input class="textbox" type="text" name="fname"><br>
+            <label class="user">Password:</label><br>
+            <input class="textbox" type="text" name="lname">
+            <label class="user">Re-enter Password:</label><br>
+            <input class="textbox" type="text" name="lname">
+        </form>
+        <button class="button_2" type="button">Create Account</button>
+    </div> <!-- END OF NAV -->
+
+    <!-- SLIDESHOW CONTAINER -->
+    <div class="slideshow-container">
+        <h2><a href="gallery_page.html" target="_blank">View Full Gallery</a></h2>
+        <div class="op"></div>
+        <!-- FULL WITH IMAGES WITH NUMBERS AND CAPTIONS -->
+        <div class="mySlides fade">
+            <img src="img/lillies_home.jpg" alt="Lilies" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/tulips_home.jpg" alt="Tulips" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/orchids_home.jpg" alt="Orchids" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/daffodil_home.jpg" alt="Daffodils" style="width:100%">
+        </div>
+        <div class="slideshow_menu">
+        <!-- DOTS/CIRCLES -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <!--NEXT /PREVIOUS BUTTONS -->
+        <b class="prev" onclick="plusSlides(-1)">&#10094;</b>
+        <b class="next" onclick="plusSlides(1)">&#10095;</b>
+    </div>
+        <img class="icon_1" src="img/earth.png" alt="Earth">
+        <img class="icon_2" src="img/flower_pot.png" alt="Potted Flower">
+        <h3>World Plant Exchange is free for everyone to use!<br>
+            For more info about World Plant Exchange check our <a>About</a> page.</h3>
+            <h4>2005-2020 World Plant Exchange (WPE)</h4>
+    </div>
+</div>
+
+<div>
+
+    
+</div>
+
+
+</body>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+</html>

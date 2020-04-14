@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Submission</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+    <style>
+        body {
+            background-color: #f9c6ff;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            margin-top: -10px;
+            width: 1300px;
+            height: 1100px;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        header {
+            width: 1300px;
+            height: 130px;
+            background-color: #24bd5c;
+            position: relative;
+            margin: 0 auto;
+            margin-top: -79px;
+        }
+
+        h1 {
+            font-size: 120px;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-family: Verdana, serif;
+            text-align: center;
+            margin-top: 350px;
+            margin-left: 275px;
+            font-size: 14px;
+            color: red;
+        }
+
+        h3 {
+            font-family: Palatino, sans-serif;
+            font-size: 23px;
+            color: #bcbcbc;
+            margin-left: 227px;
+            margin-top: -100px;
+        }
+
+        a {
+            font-family: Palatino, sans-serif;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: #ffcb92;
+        }
+
+        a:hover {
+            color: #ffbd6f;
+        }
+
+        a:active {
+            color: #ffa946;
+        }
+
+        nav {
+            width: 1300px;
+            Height: 35px;
+            background-color: #24bd5c;
+            margin-bottom: 35px;
+            padding: 0 0 10px 0;
+        }
+
+        .nav_table {
+            table-layout: fixed;
+            width: 800px;
+            text-align: center;
+            margin: 0 auto;
+            position: center;
+            color: white;
+            font-size: 22px;
+            padding-bottom: 70px;
+        }
+
+        .upload_Image {
+            width: 600px;
+            height: 380px;
+            background-color: #ebebeb;
+            margin-left: 35px;
+            float: left;
+        }
+
+        .offers {
+             margin: 0 15px 25px 5px;
+         }
+
+        .requests {
+            margin: 0 295px 25px 5px;
+        }
+
+        .title {
+            height: 30px;
+            width: 360px;
+            margin-bottom: 20px;
+            font-family: Didot, serif;
+            font-size: 25px;
+            padding: 5px;
+            float: left;
+            margin-left: 30px;
+        }
+
+        .quantity {
+            text-align: right;
+            height: 30px;
+            width: 55px;
+            margin-bottom: 10px;
+            font-family: Didot, serif;
+            font-size: 25px;
+            padding: 5px;
+            float: right;
+            margin-right: 175px;
+        }
+
+        .description {
+            height: 95px;
+            max-height: 95px;
+            min-height: 95px;
+            max-width: 585px;
+            min-width: 585px;
+            width: 585px;
+            margin-bottom: 20px;
+            font-family: Verdana, serif;
+            font-size: 16px;
+            padding: 5px;
+            float: left;
+            margin-left: 30px;
+            line-height: 1.5;
+        }
+
+        .sign-in {
+            text-align: left;
+            font-family: "didot", serif;
+            margin-left: 15px;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .user {
+            text-align: left;
+            float: left;
+            margin: 0 0 5px 30px;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .user_2 {
+            text-align: left;
+            float: left;
+            margin-bottom: 5px;
+            margin-left: 268px;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .user_3 {
+            text-align: left;
+            float: left;
+            margin-left: -374px;
+            margin-bottom: 5px;
+            margin-top: 60px;
+            font-family: "Helvetica Neue", sans-serif;
+        }
+
+        .button {
+            background-color: orange;
+            border: orange;
+            border-radius: 15px;
+            width: 165px;
+            height: 60px;
+            color: white;
+            padding: 12px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            float: right;
+            position: absolute;
+            margin-left: 30px;
+            margin-top: 280px;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .button:hover {background-color: #f49d00
+        }
+
+        .button:active {background-color: #24bd5c;
+        }
+
+        .button_2 {
+            background-color: #d6d6d6;
+            border: #d6d6d6;
+            border-radius: 15px;
+            width: 165px;
+            height: 60px;
+            color: white;
+            padding: 0 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            float: right;
+            position: absolute;
+            margin-left: 210px;
+            margin-top: 280px;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        /* Style the buttons */
+        .btn {
+            height: 60px;
+            width: 165px;
+            color: white;
+            padding: 8px 10px 10px 5px;
+            margin-bottom: 20px;
+            margin-right: 5px;
+            float: right;
+            font-size: 35px;
+            font-family: "Didot LT Pro", serif;
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: #cbcbcb;
+            cursor: pointer;
+        }
+
+        /* Style the active class, and buttons on mouse-over */
+        .active, .btn:hover {
+            background-color: #24b25a;
+            color: white;
+        }
+
+        .camera {
+            margin-left: 150px;
+            margin-top: 20px;
+            opacity: 0.2;
+        }
+
+        .camera:hover {
+            margin-left: 150px;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        .backdrop
+        {
+            margin: 0 auto;
+            zoom: 150%;
+            z-index: -1;
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body> <img class="backdrop" src="img/backdrop.png">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a>About</a></td>
+                <td><a>Sign In</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="myDIV">
+        <div class="requests"><button class="btn">Request</button></div>
+        <div class="offers"><button class="btn active">Offer</button></div>
+    </div>
+
+
+    <div class="upload_Image">
+        <img class="camera" src="img/camera_icon.png">
+        <h3>Upload Image</h3>
+    </div>
+    <label class="user">Submission Title:</label> <label class="user_2">Quantity:</label><br>
+
+    <input class="quantity" type="text" name="fname" maxlength="4">
+    <input class="title" type="text" name="fname" maxlength="25">
+
+    <label class="user_3">Description:</label><br>
+    <textarea class="description" name="message" rows="4" cols="30" maxlength="200"></textarea>
+
+    <button class="button">Sign In</button>
+    <button class="button_2">Submit</button>
+    <div><h2>! Must be signed in to submit !</h2></div>
+</div>
+
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+</body>
+</html>

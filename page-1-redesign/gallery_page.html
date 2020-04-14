@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange Submission Page</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9c6ff;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 1300px;
+            height: 1100px;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        header {
+            width: 1300px;
+            height: 130px;
+            background-color: #24bd5c;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        nav {
+            width: 1300px;
+            Height: 44px;
+            background-color: #24bd5c;
+            margin-bottom: 35px;
+            padding: 0 0 10px 0;
+        }
+
+        h1 {
+            font-size: 120px;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-family: Verdana, serif;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        h3 {
+            font-family: Palatino,sans-serif;
+            font-size: 23px;
+            color: #232323;
+            padding: 10px 5px 5px 5px;
+            margin-left: 210px;
+        }
+
+        h4 {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            color: #626262;
+            padding: 5px 13px 5px 5px;
+            margin-left: 220px;
+            line-height: 1.5;
+        }
+
+        .display {
+            width: 522px;
+            height: 321px;
+            background-color: black;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .allsubmissions {
+            margin: 0 5px 5px -100px;
+        }
+
+        .offers {
+            margin: 0 0 5px 5px;
+        }
+
+        .requests {
+            margin: 0 20px 5px 5px;
+
+        }
+
+        .btn {
+            height: 60px;
+            width: 165px;
+            color: white;
+            padding: 8px 10px 10px 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            float: right;
+            font-size: 35px;
+            font-family: "Didot LT Pro", serif;
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: #cbcbcb;
+            cursor: pointer;
+        }
+
+        .btn_b {
+            height: 60px;
+            width: 373px;
+            color: white;
+            padding: 8px 5px 10px 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            float: right;
+            font-size: 35px;
+            font-family: "Didot LT Pro", serif;
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: #cbcbcb;
+            cursor: pointer;
+        }
+
+        /* Style the active class, and buttons on mouse-over */
+        .active, .btn:hover {
+            background-color: #24b25a;
+            color: white;
+        }
+
+        .showcase {
+            width: 718px;
+            height: 150px;
+            background-color: white;
+            float: right;
+            margin-right: 20px;
+            text-align: left;
+            border-style: solid;
+            border-color: lightgrey;
+            border-width: 1px 1px 1px 0;
+        }
+
+        .thumbnail {
+            position: absolute;
+        }
+
+        .display_title {
+            width: 522px;
+            height: 85px;
+            color: #ffffff;
+            Background-color: #24bd5c;
+            float: left;
+            margin-top: 321px;
+            margin-left: 20px;
+            position: absolute;
+            text-align: left;
+            padding: 5px 10px 5px 15px;
+            font-size: 34px;
+            font-family: "Didot LT Pro", serif;
+            border-radius: 0 0 20px 0;
+        }
+
+        .display_user {
+            width: 522px;
+            height: 50px;
+            color: #ffffff;
+            float: left;
+            margin-top: 321px;
+            margin-left: 20px;
+            position: absolute;
+            text-align: right;
+            padding: 7px 15px 5px 7px;
+            font-size: 25px;
+            font-family: "Didot", serif;
+        }
+
+        .display_quantity {
+            width: 522px;
+            height: 35px;
+            color: #ffffff;
+            float: left;
+            margin-top: 371px;
+            margin-left: 20px;
+            position: absolute;
+            text-align: left;
+            padding: 0 10px 10px 15px;
+            font-size: 20px;
+            font-family: "Didot LT Pro", serif;
+        }
+
+        .display_date {
+            width: 522px;
+            height: 35px;
+            color: #ffffff;
+            float: left;
+            margin-top: 371px;
+            margin-left: 20px;
+            position: absolute;
+            text-align: right;
+            padding: 0 15px 10px 7px;
+            font-size: 20px;
+            font-family: "Didot", serif;
+        }
+
+        .button {
+            background-color: orange;
+            border: orange;
+            border-radius: 0 0 0 15px;
+            width: 150px;
+            height: 60px;
+            color: white;
+            padding: 12px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            float: left;
+            position: absolute;
+            margin-left: -522px;
+            margin-top: 406px;
+            z-index: 2;
+        }
+
+        .button:hover {background-color: #f49d00
+        }
+
+        .button:active {background-color: #24bd5c;
+        }
+
+        .button_2 {
+            background-color: #68bdee;
+            border: #68bdee;
+            border-radius: 0 0 15px 0;
+            width: 200px;
+            height: 60px;
+            color: white;
+            padding: 12px 32px 12px 44px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            float: left;
+            position: absolute;
+            margin-left: -385px;
+            margin-top: 406px;
+            z-index: 1;
+        }
+
+        .button_2:hover {background-color: #60b6e3;
+        }
+
+        .button_2:active {background-color: #24bd5c;
+        }
+
+        .nav_table {
+            table-layout: fixed;
+            width: 800px;
+            text-align: center;
+            margin: 0 auto;
+            position: center;
+            color: white;
+            font-size: 22px;
+            padding-bottom: 70px;
+        }
+
+        .center {
+            position: center;
+            margin-left: 100px;
+        }
+
+        .filters {
+            background-color: #24bd5c;
+            width: 175px;
+            height: 25px;
+            float: right;
+            padding: 1px 2px 2px 4px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: Didot, serif;
+            color: white;
+        }
+
+        .filter_dropper {
+            float: right;
+            width: 25px;
+            height: 30px;
+            background-color: #24b25a;
+            margin-right: 538px;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 13px solid white;
+            margin: 8px 7px 10px 6px
+        }
+
+        a {
+            font-family: Palatino, sans-serif;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: #ffcb92;
+        }
+
+        a:hover {
+            color: #ffbd6f;
+        }
+
+        a:active {
+            color: #ffa946;
+        }
+
+        .dropbtn {
+            background-color: #24b25a;
+            text-align: left;
+            color: white;
+            border: none;
+            width: 175px;
+            height: 30px;
+            padding: 1px 0 2px 5px;
+            font-size: 20px;
+            font-family: Didot, serif;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            height: 25px;
+            width: 175px;
+            padding: 0 0 20px 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 200px;
+            font-size: 18px;
+            font-family: Didot, serif;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #24b25a;}
+
+        .textbox {
+            height: 30px;
+            width: 250px;
+            float: left;
+            margin-left: 210px;
+            margin-bottom: 10px;
+            margin-top: -30px;
+            font-size: 20px;
+            padding: 2px;
+        }
+
+        .backdrop
+        {
+            margin: 0 auto;
+            zoom: 150%;
+            z-index: -1;
+            position: fixed;
+        }
+
+    </style>
+</head>
+
+<body> <img class="backdrop" src="img/backdrop.png">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a>About</a></td>
+                <td><a>Sign In</a></td>
+            </tr>
+        </table>
+    </nav>
+    <div>
+        <div class="display">
+            <div class="center"><img src="img/rose_selected.jpg" alt="Tea Rose"/></div>
+        </div>
+        <div class="display_title">Tea Roses</div>
+        <div class="display_user">PlantFan15 <img src="img/usa-flag.jpg" alt="USA Flag"/></div>
+        <div class="display_quantity">Qty Available: 1,000</div>
+        <div class="display_date">2/15/20</div>
+        <button class="button">Order</button>
+        <button class="button_2">Message</button>
+    </div>
+
+<div>
+    <div id="myDIV">
+        <div class="requests"><button class="btn">Requests</button></div>
+        <div class="offers"><button class="btn">Offers</button></div>
+        <div class="allsubmissions"><button class="btn_b active">All Submissions</button></div>
+    </div>
+
+    <div class="filter_dropper">
+        <div class="triangle"></div>
+    </div>
+    <div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Newest First</button>
+            <div class="dropdown-content">
+                <a href="#">Oldest First</a>
+                <a href="#">Alphabetical</a>
+                <a href="#">Quantity Most-Least</a>
+            </div>
+            <input class="textbox" type="text" name="fname">
+        </div>
+    </div>
+
+</div>
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/tea_rose_tn.jpg" alt="Tea Rose"/>
+        </div>
+        <h3>Tea Roses</h3>
+        <h4>I have an absolutely absurd amount of Tea Rose seeds. They look beautiful in my garden. Please order as many
+            as you want :)</h4>
+    </div>
+
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/tulips_tn.jpg" alt="Tulips"/>
+        </div>
+        <h3>Tulips</h3>
+        <h4>New to Gardening and I would love to start with some tulips in a variety of vibrant colors.</h4>
+    </div>
+
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/daffodil_tn.jpg" alt="Daffodils"/>
+        </div>
+        <h3>Daffodils</h3>
+        <h4>No longer have room in my garden. I have a few dozen bags of daffodil seeds. I'm limiting to 2 per user so I
+            can get them into as many hands as possible.</h4>
+    </div>
+
+    <div class="showcase">
+        <div>
+            <img class=thumbnail src="img/orchids_tn.jpg" alt="Orchids"/>
+        </div>
+        <h3>Orchids</h3>
+        <h4>Looking for some orchids to brighten up my garden, hoping for a few dozen seeds. Currently living in Italy
+            so if shipping becomes an issue
+            I'm willing to pay and costs in full.</h4>
+    </div>
+
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/lillies_tn.jpg" alt="lilies"/>
+        </div>
+        <h3>Lilies</h3>
+        <h4>5 bags of seeds for lilies, first come first serve. Will only ship within the U.S. sorry : (</h4>
+    </div>
+
+</div><!-- END OF WRAPPER -->
+
+</body>
