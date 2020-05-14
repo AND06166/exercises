@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange Gallery Page</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+    <link rel="stylesheet" type="text/css" href="gallery_page.css">
+</head>
+
+<body><img class="backdrop" src="img/backdrop.png" alt="Wallpaper">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a href="about_page.html" target="_blank">About</a></td>
+                <td><a href="account_page.html" target="_blank">Profile</a></td>
+            </tr>
+        </table>
+    </nav>
+    <div>
+        <div class="display">
+            <div class="center"><img src="img/orchid_display.png" alt="Orchids"/></div>
+        </div>
+        <div class="display_title">Orchids</div>
+        <div class="display_user"><a href="account_page.html" target="_blank">PlantMaster99</a><img class="flag"
+                                                                                                    src="img/usa-flag.jpg"
+                                                                                                    alt="USA Flag"/>
+        </div>
+        <div class="display_quantity">Qty Available: 1,000</div>
+        <div class="display_date">2/15/20</div>
+        <button class="button">Order</button>
+        <button class="button_2">
+            <a class="btn_mes" onclick="window.location.href='inbox.html'">Message</a>
+        </button>
+    </div>
+
+    <div>
+        <div id="myDIV">
+            <div class="requests">
+                <button class="btn">Requests</button>
+            </div>
+            <div class="offers">
+                <button class="btn">Offers</button>
+            </div>
+            <div class="allsubmissions">
+                <button class="btn_b active">All Submissions</button>
+            </div>
+        </div>
+
+        <div class="filter_dropper">
+            <div class="triangle"></div>
+        </div>
+        <div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Newest First</button>
+                <div class="dropdown-content">
+                    <a href="#">Oldest First</a>
+                    <a href="#">Alphabetical</a>
+                    <a href="#">Quantity (Most-Least)</a>
+                    <a href="#">Plant Type</a>
+                    <a href="#">Color</a>
+                    <a href="#">Location</a>
+                    <a href="#">Growing Difficulty (Easy-Difficult)</a>
+
+                </div>
+                <label>
+                    <input class="textbox" maxlength="30" type="text" name="fname">
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="selection">
+
+        <div id="stsel" class="showcase">
+            <div>
+                <img id="start" class=thumbnail src="img/orchids_tn.jpg" alt="Orchids"/>
+            </div>
+
+            <h3>Orchids</h3>
+            <h4>Looking for some orchids to brighten up my garden, hoping for a few dozen seeds. Currently living in
+                Italy
+                so if shipping becomes an issue
+                I'm willing to pay and costs in full.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/tea_rose_tn.jpg" alt="Tea Rose"/>
+            </div>
+            <h3>Tea Roses</h3>
+            <h4>I have an absolutely absurd amount of Tea Rose seeds. They look beautiful in my garden. Please order as
+                many
+                as you want :)</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/pilea.png" alt="Pilea Peperomioides"/>
+            </div>
+            <h3>Pilea Peperomioides</h3>
+            <h4>Trade anyone? I have some seeds for the pilea peperomioides, also commonly referred to as the Chinese
+                Money
+                Plant. I'm looking to trade for some hibiscus flowers.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/tulips_tn.jpg" alt="Tulips"/>
+            </div>
+            <h3>Tulips</h3>
+            <h4>New to Gardening and I would love to start with some tulips in a variety of vibrant colors.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/daffodil_tn.jpg" alt="Daffodils"/>
+            </div>
+            <h3>Daffodils</h3>
+            <h4>No longer have room in my garden. I have a few dozen bags of daffodil seeds. I'm limiting to 2 per user
+                so I
+                can get them into as many hands as possible.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/cactus.png" alt="Bunny Ears Cactus"/>
+            </div>
+            <h3>Bunny Ears Cactus</h3>
+            <h4>These Bunny Ears Cacti are adorable little plants for your garden. Have 20 to give away.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/lillies_tn.jpg" alt="lilies"/>
+            </div>
+            <h3>Lilies</h3>
+            <h4>5 bags of seeds for lilies, first come first serve. Will only ship within the U.S. sorry : (</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img class="thumbnail" src="img/split_leaf.png" alt="Split-Leaf Philodendron"/>
+            </div>
+            <h3>Split-Leaf Philodendron</h3>
+            <h4>Looking to share some of my Split-Leaf Philodendron seeds. They are the perfect house plants to spice of
+                your interior decor.</h4>
+        </div>
+
+        <div class="showcase">
+            <div>
+                <img id="end" class="thumbnail" src="img/blue.png" alt="Blue Daisy"/>
+            </div>
+            <h3>Blue Daisy</h3>
+            <h4>I have a few hundred seeds for the beautiful and rare Blue Daisy flower. I'm looking to trade for any
+                small
+                Cacti plants. Message me if you want to propose any different offers.</h4>
+        </div>
+
+    </div>
+
+</div><!-- END OF WRAPPER -->
+
+</body>
