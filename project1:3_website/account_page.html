@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange Account Page</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+</head>
+
+<style>
+    body {
+        background-color: #f9c6ff;
+    }
+
+    .wrapper {
+        margin: -10px auto 0;
+        width: 1300px;
+        height: 1110px;
+        background-color: #4e4e4e;
+        overflow: hidden;
+    }
+
+    header {
+        width: 1300px;
+        height: 150px;
+        background-color: #24bd5c;
+        position: relative;
+        margin: -79px auto 0;
+    }
+
+    h1 {
+        font-size: 120px;
+        padding-top: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    h2 {
+        font-size: 28px;
+        color: white;
+        padding: 7px;
+        margin-top: 17px;
+    }
+
+    h3 {
+        font-size: 17px;
+        color: #d6d6d6;
+        padding: 7px;
+        margin-top: -40px;
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        font-size: 18px;
+        color: black;
+        padding: 7px;
+        margin-top: -28px;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin: 2px 0 -2px 0;
+        color: black;
+        padding: 7px;
+    }
+
+    h6 {
+        font-family: Palatino, sans-serif;
+        font-size: 23px;
+        margin-top: -150px;
+        color: #232323;
+        padding: 10px 2px 5px 5px;
+        margin-left: 210px;
+    }
+
+    nav {
+        width: 1300px;
+        Height: 35px;
+        background-color: #24bd5c;
+        margin-bottom: 35px;
+        padding: 0 0 10px 0;
+    }
+
+    a {
+        font-family: Palatino, sans-serif;
+    }
+
+    a:link {
+        color: white;
+    }
+
+    a:visited {
+        color: #ffcb92;
+    }
+
+    a:hover {
+        color: #ffbd6f;
+    }
+
+    a:active {
+        color: #ffa946;
+    }
+
+    .nav_table {
+        table-layout: fixed;
+        width: 800px;
+        text-align: center;
+        margin: 0 auto;
+        position: center;
+        color: white;
+        font-size: 22px;
+        padding-bottom: 70px;
+    }
+
+    .backdrop {
+        margin: 0 auto;
+        zoom: 150%;
+        z-index: -1;
+        position: fixed;
+    }
+
+    .profile {
+        height: 300px;
+        width: 300px;
+        margin-left: 35px;
+        Background-color: #24b25a;
+    }
+
+    .flag {
+        zoom: 80%;
+        float: right;
+        margin-top: 7px;
+    }
+
+    .profile_info {
+        height: 97px;
+        margin-top: -23px;
+        width: 300px;
+        margin-left: 35px;
+        background-color: white;
+    }
+
+    .friends {
+        height: 300px;
+        margin-top: -23px;
+        width: 300px;
+        margin-left: 35px;
+        background-color: white;
+    }
+
+    .textbox {
+        width: 284px;
+        height: 30px;
+        margin-left: 5px;
+        font-size: 20px;
+    }
+
+    .offers {
+        margin: 0 0 5px 5px;
+    }
+
+    .requests {
+        margin: 0 30px 5px 5px;
+    }
+
+    .btn {
+        height: 60px;
+        width: 220px;
+        color: white;
+        padding: 8px 10px 10px 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        float: right;
+        font-size: 35px;
+        font-family: "Didot LT Pro", serif;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: #cbcbcb;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #24b25a;
+    }
+
+    .active {
+        background-color: #24b25a;
+        height: 65px;
+        margin-bottom: 0;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .inbox {
+        height: 778px;
+        width: 895px;
+        background-color: #24b25a;
+        float:right;
+        margin-right: 35px;
+    }
+
+    .fr {
+        zoom: 15%;
+        margin-left: -5px;
+    }
+
+    .fr:hover {
+        outline: 12px solid #24b25a;
+    }
+
+    #f_section {
+        margin-top: -2px;
+    }
+
+    #f_row {
+        margin-left: 45px;
+    }
+
+    #f_row2 {
+        margin-left: 45px;
+    }
+
+    #f_row3 {
+        margin-left: 45px;
+    }
+
+    #green {
+        background: linear-gradient(180deg, #25bd5c 0%, #267141 100%);
+        height: 92px;
+    }
+
+    .showcase {
+        width: 873px;
+        height: 150px;
+        background-color: white;
+        float: right;
+        margin-top: 0;
+        margin-right: 10px;
+        text-align: left;
+        border-style: solid;
+        border-color: lightgrey;
+        border-width: 1px 1px 1px 0;
+    }
+
+    .showcase:hover {
+        outline: 2px solid #24b25a;
+        outline-offset: -2px;
+    }
+
+    .des {
+        font-family: Georgia, serif;
+        font-size: 14px;
+        color: #626262;
+        padding: 5px 13px 5px 5px;
+        margin-left: 220px;
+        margin-top: -55px;
+        line-height: 1.5;
+    }
+
+    #stsel {
+        margin-top: 10px;
+    }
+
+    .star {
+        zoom: 19%;
+    }
+
+
+
+
+</style>
+
+
+<body> <img class="backdrop" src="img/backdrop.png" alt="Wallpaper">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a href="about_page.html" target="_blank">About</a></td>
+                <td><a href="account_page.html" target="_blank">Profile</a></td>
+            </tr>
+        </table>
+    </nav>
+
+        <div id="myDIV">
+            <div onclick="window.location.href='inbox.html'" class="requests">
+                <button class="btn">Messages</button>
+            </div>
+            <div class="offers">
+                <button class="btn">Trades</button>
+            </div>
+            <div class="requests">
+                <button class="btn">Orders</button>
+            </div>
+            <div class="offers">
+                <button class="btn active">Submissions</button>
+            </div>
+        </div>
+
+    <div class="inbox">
+
+        <div onclick="window.location.href='gallery_page.html'" id="stsel" class="showcase">
+            <div>
+                <img id="start" class=thumbnail src="img/orchids_tn.jpg" alt="Orchids"/>
+            </div>
+
+            <h6>Orchids</h6>
+            <h4 class="des" >Looking for some orchids to brighten up my garden, hoping for a few dozen seeds. Currently living in Italy
+                so if shipping becomes an issue
+                I'm willing to pay and costs in full.</h4>
+        </div>
+
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/cactus.png" alt="Bunny Ears Cactus"/>
+        </div>
+        <h6>Bunny Ears Cactus</h6>
+        <h4 class="des" >These Bunny Ears Cacti are adorable little plants for your garden. Have 20 to give away.</h4>
+    </div>
+
+    <div class="showcase">
+        <div>
+            <img class="thumbnail" src="img/lillies_tn.jpg" alt="lilies"/>
+        </div>
+        <h6>Lilies</h6>
+        <h4 class="des" >5 bags of seeds for lilies, first come first serve. Will only ship within the U.S. sorry : (</h4>
+    </div>
+    </div>
+
+    <div class="profile">
+        <img src="img/profile_pic_gardener.jpg" alt="Profile Picture">
+    </div>
+    <div id="green" class="profile_info">
+        <h2>PlantMaster99 <img class=flag src="img/usa-flag.jpg" alt="USA Flag"> </h2>
+        <h3>Joined: 5/2/2020 <img class="star" src="img/stars.png" alt="4-Stars"> </h3>
+    </div>
+        <div class="profile_info">
+        <h4>Submissions (3)</h4>
+        <h4>Orders (2)</h4>
+        <h4>Trades (3)</h4>
+    </div>
+    <div>
+
+    </div>
+    <div id="f_section" class="friends">
+        <h5>Friends (5)</h5>
+            <img class="fr" id="f_row" src="img/f1.jpg" alt="GardenJoe">
+        <img class="fr" src="img/f2.jpg" alt="TulipTerry">
+        <img class="fr" src="img/f3.jpg" alt="ReeseOfRoses">
+        <img class="fr" src="img/f4.png" alt="Just2Cool">
+        <img class="fr" src="img/f5.jpg" alt="BerryWPE">
+        <h5>Recent Contacts</h5>
+        <img class="fr" id="f_row2" src="img/f7.jpg" alt="BobRossFan5">
+        <img class="fr" src="img/f8.png" alt="LawnMan">
+        <img class="fr" src="img/f1.jpg" alt="GardenJoe">
+        <img class="fr" src="img/f6.png" alt="FlowerPower22">
+        <img class="fr" src="img/f4.png" alt="Just2Cool">
+        <img class="fr" src="img/f9.jpg" alt="PairOFlamingos">
+        <img class="fr" id="f_row3" src="img/f10.jpg" alt="SunlightQueen">
+        <img class="fr" src="img/f12.jpg" alt="PurrfectPlants">
+        <img class="fr" src="img/f11.jpg" alt="KingDaffodil">
+        <img class="fr" src="img/f14.jpg" alt="NoPlaceLikeGnome">
+        <img class="fr" src="img/f3.jpg" alt="ReeseOfRoses">
+        <img class="fr" src="img/f13.jpg" alt="H20verload">
+        <h5>Search User</h5>
+        <label>
+            <input class="textbox" maxlength="20" type="text" name="fname">
+        </label>
+
+    </div>
+
+</div>
+
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+</body>
+</html>
