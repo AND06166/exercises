@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Plant Exchange Submit Page</title>
+    <link rel="shortcut icon" href="Plant_favicon.ico">
+</head>
+
+<style>
+
+    body {
+        background-color: #f9c6ff;
+    }
+
+    .wrapper {
+        margin: -10px auto 0;
+        width: 1300px;
+        height: 1100px;
+        background-color: #4e4e4e;
+        overflow: hidden;
+    }
+
+    header {
+        width: 1300px;
+        height: 150px;
+        background-color: #24bd5c;
+        position: relative;
+        margin: -79px auto 0;
+    }
+
+    h1 {
+        font-size: 120px;
+        padding-top: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    h2 {
+        font-family: Verdana, serif;
+        text-align: center;
+        margin-top: 350px;
+        margin-left: 275px;
+        font-size: 14px;
+        color: #fc4343;
+    }
+
+    h3 {
+        font-family: Palatino, sans-serif;
+        font-size: 23px;
+        color: #bcbcbc;
+        margin-left: 227px;
+        margin-top: -100px;
+    }
+
+    a {
+        font-family: Palatino, sans-serif;
+    }
+
+    a:link {
+        color: white;
+    }
+
+    a:visited {
+        color: #ffcb92;
+    }
+
+    a:hover {
+        color: #ffbd6f;
+    }
+
+    a:active {
+        color: #ffa946;
+    }
+
+    nav {
+        width: 1300px;
+        Height: 35px;
+        background-color: #24bd5c;
+        margin-bottom: 35px;
+        padding: 0 0 10px 0;
+    }
+
+    .nav_table {
+        table-layout: fixed;
+        width: 800px;
+        text-align: center;
+        margin: 0 auto;
+        position: center;
+        color: white;
+        font-size: 22px;
+        padding-bottom: 70px;
+    }
+
+    .upload_Image {
+        width: 600px;
+        height: 380px;
+        background-color: #ebebeb;
+        margin-left: 35px;
+        float: left;
+    }
+
+    .offers {
+        margin: 0 15px 25px 5px;
+    }
+
+    .requests {
+        margin: 0 125px 25px 5px;
+    }
+
+    .title {
+        height: 30px;
+        width: 360px;
+        margin-bottom: 20px;
+        font-family: Didot, serif;
+        font-size: 25px;
+        padding: 5px;
+        float: left;
+        margin-left: 30px;
+    }
+
+    .quantity {
+        text-align: right;
+        height: 30px;
+        width: 55px;
+        margin-bottom: 10px;
+        font-family: Didot, serif;
+        font-size: 25px;
+        padding: 5px;
+        float: right;
+        margin-right: 175px;
+    }
+
+    .description {
+        height: 95px;
+        max-height: 95px;
+        min-height: 95px;
+        max-width: 585px;
+        min-width: 585px;
+        width: 585px;
+        margin-bottom: 20px;
+        font-family: Verdana, serif;
+        font-size: 16px;
+        padding: 5px;
+        float: left;
+        margin-left: 30px;
+        line-height: 1.5;
+    }
+
+    .user {
+        color: white;
+        text-align: left;
+        float: left;
+        margin: 0 0 5px 30px;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+
+    .user_2 {
+        color: white;
+        text-align: left;
+        float: left;
+        margin-bottom: 5px;
+        margin-left: 268px;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+
+    .user_3 {
+        color: white;
+        text-align: left;
+        float: left;
+        margin-left: -374px;
+        margin-bottom: 5px;
+        margin-top: 60px;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+
+    .button {
+        background-color: orange;
+        border: orange;
+        border-radius: 15px;
+        width: 165px;
+        height: 60px;
+        color: white;
+        padding: 12px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 30px;
+        float: right;
+        position: absolute;
+        margin-left: 30px;
+        margin-top: 280px;
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+
+    .button:hover {background-color: #f49d00
+    }
+
+    .button:active {background-color: #24bd5c;
+    }
+
+    .button_2 {
+        background-color: #24bd5c;
+        border: #24bd5c;
+        border-radius: 15px;
+        width: 165px;
+        height: 60px;
+        color: white;
+        padding: 0 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 30px;
+        float: right;
+        position: absolute;
+        margin-left: 210px;
+        margin-top: 280px;
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+
+    /* Style the buttons */
+    .btn {
+        height: 60px;
+        width: 165px;
+        color: white;
+        padding: 8px 10px 10px 5px;
+        margin-bottom: 20px;
+        margin-right: 5px;
+        float: right;
+        font-size: 35px;
+        font-family: "Didot LT Pro", serif;
+        text-align: center;
+        border: none;
+        outline: none;
+        background-color: #cbcbcb;
+        cursor: pointer;
+    }
+
+    /* Style the active class, and buttons on mouse-over */
+    .active, .btn:hover {
+        background-color: #24b25a;
+        color: white;
+    }
+
+    .camera {
+        margin-left: 150px;
+        margin-top: 20px;
+        opacity: 0.2;
+    }
+
+    .camera:hover {
+        margin-left: 150px;
+        margin-top: 20px;
+        opacity: 0.3;
+    }
+
+    .backdrop
+    {
+        margin: 0 auto;
+        zoom: 150%;
+        z-index: -1;
+        position: fixed;
+    }
+
+    #btn_link
+    {
+        color: white;
+        font-family: Verdana, serif;
+        font-size: 26px;
+    }
+
+    #btn_link_2
+    {
+        color: white;
+        font-family: Verdana, serif;
+        font-size: 26px;
+    }
+
+</style>
+
+<body> <img class="backdrop" src="img/backdrop.png" alt="Wallpaper">
+<div class="wrapper">
+
+    <header>
+        <h1>World Plant Exchange</h1>
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                <td><a href="home_page.html" target="_blank">Home</a></td>
+                <td><a href="gallery_page.html" target="_blank">Gallery</a></td>
+                <td><a href="submit_page.html" target="_blank">Submit</a></td>
+                <td><a href="about_page.html" target="_blank">About</a></td>
+                <td><a href="account_page.html" target="_blank">Profile</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div id="myDIV">
+        <div class="requests"><button class="btn">Trades</button></div>
+        <div class="requests"><button class="btn">Request</button></div>
+        <div class="offers"><button class="btn active">Offer</button></div>
+    </div>
+
+
+    <div class="upload_Image">
+        <img class="camera" src="img/camera_icon.png" alt="Camera">
+        <h3>Upload Image</h3>
+    </div>
+    <label class="user">Submission Title:</label> <label class="user_2">Quantity:</label><br>
+
+    <label>
+        <input class="quantity" type="text" name="fname" maxlength="4">
+    </label>
+    <label>
+        <input class="title" type="text" name="fname" maxlength="25">
+    </label>
+
+    <label class="user_3">Description:</label><br>
+    <label>
+        <textarea class="description" name="message" rows="4" cols="30" maxlength="200"></textarea>
+    </label>
+
+    <button class="button">
+        <a id="btn_link" href="account_page.html" target="_blank">Sign In</a>
+    </button>
+
+    <button class="button_2">
+        <a id="btn_link_2" href="gallery_page.html" target="_blank">Submit</a>
+    </button>
+    <div><h2>! Must be signed in to submit !</h2></div>
+</div>
+
+<script>
+    // Add active class to the current button (highlight it)
+    const header = document.getElementById("myDIV");
+    const btns = header.getElementsByClassName("btn");
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            const current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+</body>
+</html>
